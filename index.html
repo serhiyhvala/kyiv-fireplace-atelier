@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Havrysh Fireplaces · Fireplace maker in Kyiv</title>
+  <meta name="description" content="Taras Havrysh designs and builds brick and stone fireplaces, tiled stoves and bread ovens in Kyiv. See recent work, starting prices and how to book a site visit.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="pat-brick" width="40" height="20" patternUnits="userSpaceOnUse">
+        <rect width="40" height="20" style="fill:var(--color-accent-solid)"/>
+        <path d="M0 0.5H40M0 10.5H40M20 0V10M0 10V20" style="fill:none;stroke:var(--color-bg);stroke-opacity:.45;stroke-width:1.2"/>
+      </pattern>
+      <pattern id="pat-tile" width="30" height="30" patternUnits="userSpaceOnUse">
+        <rect width="30" height="30" style="fill:var(--color-bg)"/>
+        <rect x=".5" y=".5" width="29" height="29" style="fill:none;stroke:var(--color-text-primary);stroke-width:1"/>
+        <path d="M15 8L22 15L15 22L8 15Z" style="fill:var(--color-accent-solid)"/>
+      </pattern>
+      <pattern id="pat-stone" width="80" height="50" patternUnits="userSpaceOnUse">
+        <rect x="1" y="1" width="36" height="22" rx="3" style="fill:var(--color-border);stroke:var(--color-text-primary);stroke-opacity:.5;stroke-width:1.5"/>
+        <rect x="40" y="1" width="39" height="22" rx="3" style="fill:var(--color-border);stroke:var(--color-text-primary);stroke-opacity:.5;stroke-width:1.5"/>
+        <rect x="1" y="26" width="22" height="23" rx="3" style="fill:var(--color-border);stroke:var(--color-text-primary);stroke-opacity:.5;stroke-width:1.5"/>
+        <rect x="26" y="26" width="34" height="23" rx="3" style="fill:var(--color-border);stroke:var(--color-text-primary);stroke-opacity:.5;stroke-width:1.5"/>
+        <rect x="63" y="26" width="16" height="23" rx="3" style="fill:var(--color-border);stroke:var(--color-text-primary);stroke-opacity:.5;stroke-width:1.5"/>
+      </pattern>
+      <g id="flame">
+        <path d="M0 0C-40 0 -50 -44 -25 -74C-20 -54 -10 -52 -5 -64C-10 -94 10 -114 15 -139C45 -109 50 -69 35 -49C45 -49 52 -59 55 -69C62 -39 45 0 0 0Z" style="fill:var(--color-bg)"/>
+        <path d="M0 0C-18 0 -24 -20 -12 -36C-8 -26 0 -26 3 -34C16 -22 20 -8 12 0Z" style="fill:var(--color-accent-light)"/>
+      </g>
+    </defs>
+
+    <symbol id="art-hearth" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+      <rect x="150" y="40" width="100" height="60" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M160 90l25-30 20 22 15-14 30 22" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="40" y="120" width="320" height="24" fill="currentColor"/>
+      <rect x="70" y="144" width="260" height="300" fill="url(#pat-brick)"/>
+      <path d="M120 444V290a80 80 0 0 1 160 0V444Z" fill="currentColor"/>
+      <rect x="150" y="428" width="100" height="16" style="fill:var(--color-border-strong)"/>
+      <use href="#flame" transform="translate(200 428)"/>
+      <rect x="40" y="444" width="320" height="14" fill="currentColor"/>
+      <path d="M0 458H400" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+
+    <symbol id="art-stone" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+      <rect width="600" height="400" fill="url(#pat-stone)"/>
+      <rect x="100" y="132" width="400" height="34" style="fill:var(--color-text-secondary)"/>
+      <rect x="130" y="166" width="340" height="194" fill="currentColor"/>
+      <rect x="220" y="342" width="160" height="18" style="fill:var(--color-border-strong)"/>
+      <use href="#flame" transform="translate(300 342) scale(1.1)"/>
+      <rect x="90" y="360" width="420" height="20" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="art-stove" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid meet">
+      <rect x="140" y="8" width="20" height="30" fill="currentColor"/>
+      <rect x="60" y="36" width="180" height="18" fill="currentColor"/>
+      <rect x="70" y="54" width="160" height="312" fill="url(#pat-tile)" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="112" y="270" width="76" height="64" fill="currentColor"/>
+      <use href="#flame" transform="translate(150 332) scale(.3)"/>
+      <rect x="56" y="366" width="188" height="16" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="art-oven" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+      <rect x="185" y="40" width="30" height="70" fill="url(#pat-brick)"/>
+      <path d="M80 220A120 120 0 0 1 320 220Z" fill="url(#pat-brick)"/>
+      <path d="M170 220V180a30 30 0 0 1 60 0V220Z" fill="currentColor"/>
+      <use href="#flame" transform="translate(200 220) scale(.42)"/>
+      <rect x="60" y="220" width="280" height="50" fill="currentColor"/>
+      <path d="M0 270H400" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+
+    <symbol id="art-plan" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+      <g fill="none" stroke="currentColor" stroke-linecap="square">
+        <path d="M40 360V40H360V360" stroke-width="3"/>
+        <path d="M20 360H380" stroke-width="2"/>
+        <rect x="110" y="120" width="180" height="240" stroke-width="1.5"/>
+        <rect x="150" y="200" width="100" height="160" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <path d="M150 260a50 50 0 0 1 100 0" stroke-width="1.5"/>
+        <path d="M110 90H290M110 82V98M290 82V98" stroke-width="1"/>
+        <path d="M330 120V360M322 120H338M322 360H338" stroke-width="1"/>
+        <path d="M40 120l-20 20M40 160l-20 20M40 200l-20 20M40 240l-20 20M40 280l-20 20" stroke-width="1"/>
+      </g>
+      <text x="200" y="78" text-anchor="middle" font-size="16" fill="currentColor">1 800</text>
+      <text x="348" y="246" font-size="16" fill="currentColor" transform="rotate(-90 348 246)" text-anchor="middle">2 400</text>
+    </symbol>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="container header-row">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M4 29V15a12 12 0 0 1 24 0v14Z" style="fill:var(--color-accent-solid)"/>
+          <path d="M10 29V16a6 6 0 0 1 12 0v13Z" style="fill:var(--color-text-primary)"/>
+          <path d="M16 29c-3 0-4-3-2.5-5 .5 1 1 1.500 2 1-.500-2.500 1-4 1.500-5 2 2 3 4.500 2 6.500.500 0 1-.500 1-1 .500 2-1 3.500-4 3.500Z" style="fill:var(--color-bg)"/>
+        </svg>
+        <span class="brand-text"><span class="brand-name">Havrysh</span><span class="brand-sub">Fireplaces · Kyiv</span></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#faq">Questions</a></li>
+          <li class="nav-book"><a class="button button-primary" href="#visit">Book a visit</a></li>
+        </ul>
+      </nav>
+      <a class="button button-primary button-small header-cta" href="#visit">Book a visit</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow hero-fade" style="--d:0ms">Fireplace maker · Kyiv</p>
+          <h1 class="hero-title">
+            <span class="line"><span style="--i:0">Fireplaces,</span></span>
+            <span class="line"><span style="--i:1">built by <em>hand</em></span></span>
+            <span class="line"><span style="--i:2">in Kyiv.</span></span>
+          </h1>
+          <p class="hero-lead hero-fade" style="--d:350ms">Taras Havrysh designs and lays brick, stone and tiled stoves for houses in and around Kyiv. One maker, one drawing, and a first fire lit with you at the end.</p>
+          <div class="hero-actions hero-fade" style="--d:450ms">
+            <a class="button button-fire button-arrow" href="#visit">Book a visit
+              <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+            <a class="button button-secondary" href="#work">See the work</a>
+          </div>
+          <dl class="hero-facts hero-fade" style="--d:550ms">
+            <div><dt>Workshop</dt><dd>Podil, Kyiv</dd></div>
+            <div><dt>Build time</dt><dd>4–8&nbsp;weeks</dd></div>
+            <div><dt>Site visit</dt><dd>3&nbsp;500&nbsp;UAH</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-collage">
+          <figure class="collage-main">
+            <div class="frame hero-uncover" style="--ratio: 4/5; --d:150ms" role="img" aria-label="Drawing of a brick fireplace with an arched firebox and a small fire">
+              <svg aria-hidden="true" focusable="false"><use href="#art-hearth"/></svg>
+            </div>
+            <figcaption class="collage-caption hero-fade" style="--d:800ms">Fig. 1 – Brick portal, arched firebox</figcaption>
+          </figure>
+          <div class="frame frame-ink collage-plan hero-uncover" style="--ratio: 1/1; --d:450ms" role="img" aria-label="Technical drawing of a fireplace wall with dimensions in millimetres">
+            <svg aria-hidden="true" focusable="false"><use href="#art-plan"/></svg>
+          </div>
+          <div class="frame collage-swatch hero-uncover" style="--ratio: 1/1; --d:650ms" aria-hidden="true">
+            <svg viewBox="0 0 120 120" preserveAspectRatio="none" focusable="false"><rect width="120" height="120" fill="url(#pat-brick)"/></svg>
+          </div>
+          <p class="sticker hero-fade" style="--d:900ms">Made to order<br>in Kyiv</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Selected work</p>
+          <h2 id="work-title" data-reveal>Hearths that hold the <em>room</em> together</h2>
+          <p class="section-lead" data-reveal>Three recent builds, each drawn for one wall and one family.</p>
+        </div>
+
+        <article class="work-item work-a">
+          <div class="frame work-media" data-reveal="clip" style="--ratio: 3/2" role="img" aria-label="Drawing of an open field-stone hearth with an oak beam mantel">
+            <svg aria-hidden="true" focusable="false"><use href="#art-stone"/></svg>
+          </div>
+          <div class="work-text" data-reveal>
+            <p class="label">No. 01 · Open hearth</p>
+            <h3>Field-stone hearth in a house in Kozyn</h3>
+            <p>A wide open firebox under an oak beam. The stone came from the Carpathians, and the chimney was rebuilt before the first course went down.</p>
+            <dl class="specs">
+              <div><dt>Material</dt><dd>Field stone, oak</dd></div>
+              <div><dt>Opening</dt><dd>1&nbsp;100 × 700&nbsp;mm</dd></div>
+              <div><dt>Built in</dt><dd>7&nbsp;weeks</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="work-item work-b">
+          <div class="frame work-media" data-reveal="clip" role="img" aria-label="Drawing of a tall stove faced in glazed tile">
+            <svg aria-hidden="true" focusable="false"><use href="#art-stove"/></svg>
+          </div>
+          <div class="work-text" data-reveal>
+            <p class="label">No. 02 · Tiled stove</p>
+            <h3>Tiled stove for a family house in Boyarka</h3>
+            <p>A slow-heat stove faced in hand-glazed tile. One evening fire keeps the ground floor warm through the next day.</p>
+            <dl class="specs">
+              <div><dt>Material</dt><dd>Fireclay, glazed tile</dd></div>
+              <div><dt>Height</dt><dd>2&nbsp;300&nbsp;mm</dd></div>
+              <div><dt>Built in</dt><dd>8&nbsp;weeks</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="work-item work-c">
+          <div class="frame work-media" data-reveal="clip" style="--ratio: 4/3" role="img" aria-label="Drawing of a brick dome bread oven with a chimney">
+            <svg aria-hidden="true" focusable="false"><use href="#art-oven"/></svg>
+          </div>
+          <div class="work-text" data-reveal>
+            <p class="label">No. 03 · Bread oven</p>
+            <h3>Dome oven with a cooking hearth for a country kitchen</h3>
+            <p>A firebrick dome for bread and roasts, with a flat hearth beside it for pots. It holds heat for hours after the fire is out.</p>
+            <dl class="specs">
+              <div><dt>Material</dt><dd>Firebrick, red brick</dd></div>
+              <div><dt>Dome</dt><dd>900&nbsp;mm inside</dd></div>
+              <div><dt>Built in</dt><dd>6&nbsp;weeks</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section band-sunken" id="process" aria-labelledby="process-title">
+      <div class="container process-grid">
+        <div class="process-head">
+          <p class="eyebrow" data-reveal>How a build runs</p>
+          <h2 id="process-title" data-reveal>From a measured wall to a <em>first fire</em></h2>
+          <p class="section-lead" data-reveal>Four steps, and you know the price and the date before any brick is ordered.</p>
+        </div>
+        <ol class="steps">
+          <li class="step" data-reveal style="--i:0">
+            <span class="step-num" aria-hidden="true">01</span>
+            <div>
+              <p class="label">1–2 hours</p>
+              <h3>Visit</h3>
+              <p>I come to your home, measure the wall, check the chimney and the floor load, and ask how you plan to use the fire.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--i:1">
+            <span class="step-num" aria-hidden="true">02</span>
+            <div>
+              <p class="label">Within a week</p>
+              <h3>Drawing</h3>
+              <p>You get a scaled drawing and a fixed quote. You choose the brick, stone or tile, and we change the drawing until it is right.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--i:2">
+            <span class="step-num" aria-hidden="true">03</span>
+            <div>
+              <p class="label">4–8 weeks</p>
+              <h3>Build</h3>
+              <p>I build on site, course by course. Drying time between stages is part of the schedule, so nothing is rushed or cracked.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--i:3">
+            <span class="step-num" aria-hidden="true">04</span>
+            <div>
+              <p class="label">Half a day</p>
+              <h3>First fire</h3>
+              <p>We light the first fire together. I show you how to burn dry wood, what to sweep and when, and how to care for the masonry.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section band-ink" id="prices" aria-labelledby="prices-title">
+      <div class="container prices-grid">
+        <div class="prices-head">
+          <p class="eyebrow" data-reveal>Starting prices</p>
+          <h2 id="prices-title" data-reveal>Prices, set out <em>plainly</em></h2>
+          <p class="big-figure" data-reveal>
+            <span class="big-num">3&nbsp;500</span>
+            <span class="big-unit">UAH for the site visit and drawing, credited against the build.</span>
+          </p>
+          <a class="button button-primary" href="#visit">Book a visit</a>
+        </div>
+        <div class="prices-body">
+          <ul class="price-list">
+            <li class="price-row" data-reveal style="--i:0">
+              <div><p class="price-name">Open hearth in brick or stone</p><p class="price-desc">Firebox, chimney throat, mantel and hearth slab.</p></div>
+              <p class="price-value"><span class="price-from">from</span> 180&nbsp;000&nbsp;UAH</p>
+            </li>
+            <li class="price-row" data-reveal style="--i:1">
+              <div><p class="price-name">Tiled stove</p><p class="price-desc">Slow-heat masonry stove faced in glazed tile.</p></div>
+              <p class="price-value"><span class="price-from">from</span> 260&nbsp;000&nbsp;UAH</p>
+            </li>
+            <li class="price-row" data-reveal style="--i:2">
+              <div><p class="price-name">Hearth with bread oven or cooking surface</p><p class="price-desc">For a kitchen, a terrace or a summer house.</p></div>
+              <p class="price-value"><span class="price-from">from</span> 320&nbsp;000&nbsp;UAH</p>
+            </li>
+            <li class="price-row" data-reveal style="--i:3">
+              <div><p class="price-name">New facing for an existing firebox</p><p class="price-desc">Brick, stone or tile over a sound firebox.</p></div>
+              <p class="price-value"><span class="price-from">from</span> 60&nbsp;000&nbsp;UAH</p>
+            </li>
+            <li class="price-row" data-reveal style="--i:4">
+              <div><p class="price-name">Repair and relining</p><p class="price-desc">Cracked firebrick, failed joints, drawing problems.</p></div>
+              <p class="price-value"><span class="price-from">from</span> 8&nbsp;000&nbsp;UAH</p>
+            </li>
+          </ul>
+          <p class="price-note">Prices include materials and labour. Chimney work is quoted separately, and the final figure is fixed on the drawing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-head">
+          <p class="eyebrow" data-reveal>Questions</p>
+          <h2 id="faq-title" data-reveal>Before you <em>book</em></h2>
+          <p class="section-lead" data-reveal>Not answered here? Call <a href="tel:+380445550123">+380&nbsp;44&nbsp;555&nbsp;01&nbsp;23</a> or write to <a href="mailto:studio@example.com">studio@example.com</a>.</p>
+        </div>
+        <div class="faq">
+          <details class="faq-item" name="faq">
+            <summary>How long does a build take?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>An open hearth takes 4–6 weeks, a tiled stove 6–8 weeks. Masonry needs time to dry between stages, and I put that time in the schedule you receive with the drawing.</p></div>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Can I have a wood fire in a flat?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>Only with a chimney of its own, a floor that carries the weight, and the building’s approval. I check all three on the visit, so you know before you commit to a build.</p></div>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Do you work outside Kyiv?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>Yes, within about 100&nbsp;km of the city. Further away is possible by arrangement, with travel added to the quote.</p></div>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Can you work from an architect’s drawings?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>Yes. Send the plans before the visit and I will check the firebox, chimney and clearances against them, then draw the build to match.</p></div>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>How do payments work?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>Half when you approve the drawing, to order materials, and the rest at the first fire. The visit fee is deducted from the first payment.</p></div>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>What wood should I burn, and how often do I sweep?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>Dry hardwood such as oak, beech or hornbeam, split and stored for at least a year. Sweep the chimney once a year before the season starts.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band-sunken" id="visit" aria-labelledby="visit-title">
+      <div class="container visit-grid">
+        <div class="visit-form">
+          <p class="eyebrow" data-reveal>Book a visit</p>
+          <h2 id="visit-title" data-reveal>Show me the <em>wall</em></h2>
+          <p class="section-lead" data-reveal>Tell me where you live and what you have in mind. I call you within one working day to agree a time.</p>
+          <form class="form" data-form novalidate>
+            <p class="form-note">Fields marked * are required.</p>
+            <div class="field">
+              <label for="f-name">Name <span aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+              <p class="field-error" id="f-name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone <span aria-hidden="true">*</span></label>
+              <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+380 44 555 01 23" pattern="\+?[0-9 \-]{7,20}" required>
+              <p class="field-error" id="f-phone-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-where">Address or district</label>
+              <input id="f-where" name="where" type="text" autocomplete="street-address" placeholder="Boyarka, Kyiv region">
+            </div>
+            <div class="field">
+              <label for="f-type">What do you want built</label>
+              <select id="f-type" name="type">
+                <option>Open hearth</option>
+                <option>Tiled stove</option>
+                <option>Bread oven or cooking hearth</option>
+                <option>New facing for an existing firebox</option>
+                <option>Repair or relining</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-note">Anything I should know</label>
+              <textarea id="f-note" name="note" rows="4"></textarea>
+            </div>
+            <button class="button button-primary" type="submit">Send request</button>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+        <div class="visit-info">
+          <dl class="hours" data-reveal>
+            <div><dt>Monday–Friday</dt><dd>9:00–18:00</dd></div>
+            <div><dt>Saturday</dt><dd>By appointment</dd></div>
+            <div><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+          <p class="visit-address" data-reveal>Workshop on Naberezhno-Khreshchatytska street, Podil, Kyiv. Site visits across Kyiv and the region on weekdays and Saturday mornings.</p>
+          <div class="map" data-reveal>
+            <iframe title="Map of Naberezhno-Khreshchatytska street, Kyiv" src="https://maps.google.com/maps?q=Naberezhno-Khreshchatytska%20street%2C%20Kyiv&z=15&output=embed" loading="lazy"></iframe>
+          </div>
+          <p><a href="https://maps.google.com/?q=Naberezhno-Khreshchatytska%20street%2C%20Kyiv" target="_blank" rel="noopener">Directions to the workshop<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer band-ink">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <p class="footer-brand">Havrysh Fireplaces</p>
+          <p>Fireplaces, tiled stoves and bread ovens, drawn and built by one maker in Kyiv.</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="label">Pages</p>
+          <ul class="footer-list">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#prices">Prices</a></li>
+            <li><a href="#faq">Questions</a></li>
+            <li><a href="#visit">Book a visit</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="label">Contact</p>
+          <ul class="footer-list">
+            <li><a href="tel:+380445550123">+380&nbsp;44&nbsp;555&nbsp;01&nbsp;23</a></li>
+            <li><a href="mailto:studio@example.com">studio@example.com</a></li>
+            <li>Naberezhno-Khreshchatytska street, Podil</li>
+          </ul>
+        </div>
+        <div>
+          <p class="label">Hours</p>
+          <ul class="footer-list">
+            <li>Mon–Fri 9:00–18:00</li>
+            <li>Sat by appointment</li>
+            <li>Sun closed</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-wordmark" aria-hidden="true">Havrysh</p>
+      <p class="footer-small">© 2026 Havrysh Fireplaces, Kyiv.</p>
+    </div>
+  </footer>
+</body>
+</html>
